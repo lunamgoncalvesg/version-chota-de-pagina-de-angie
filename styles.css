@@ -61,7 +61,7 @@ main img {
   border-radius: 1em;
 }
 
-.texto {
+.text {
   width: 25vw;
   height: 100%;
   display: flex;
@@ -84,7 +84,7 @@ button:hover {
   transition: 1s ease-in-out;
 }
 
-#carrito.active{
+#cart.active{
   display: flex;
   flex-direction: column;
 }
@@ -95,12 +95,13 @@ button:hover {
     gap: 2vh;
     height: auto;
     margin: 3vh 2vw;
+    padding: 2em;
   }
   main img {
     width: 80vw;
     height: auto;
   }
-  .texto {
+  .text {
     width: 90vw;
     text-align: center;
   }
