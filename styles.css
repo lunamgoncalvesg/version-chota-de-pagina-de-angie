@@ -1,0 +1,120 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  background: #d9d1c1;
+}
+
+header {
+  height: 15vh;
+  background: #9e6d60;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2vw;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+nav a.active {
+  font-weight: bold;
+}
+
+li {
+  list-style-type: none;
+  font-size: 1.3em;
+}
+
+ul {
+  display: flex;
+  gap: 2em;
+}
+
+i {
+  color: #c9b681;
+}
+
+main > div {
+  display: none;
+  height: 80vh;
+  margin: 2.5vh 1.5vw;
+  background: #ad9585;
+  border-radius: 2em;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20vh;
+}
+
+main > div.active {
+  display: flex;
+}
+
+main img {
+  width: 30vw;
+  height: auto;
+  border-radius: 1em;
+}
+
+.texto {
+  width: 25vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.7em;
+}
+
+button {
+  width: 30%;
+  background: #9c724f;
+  border-radius: 2em;
+  height: 7%;
+  border: #9c724f;
+}
+
+button:hover {
+  background: #7e593b;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+}
+
+#carrito.active{
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  main > div {
+    flex-direction: column;
+    gap: 2vh;
+    height: auto;
+    margin: 3vh 2vw;
+  }
+  main img {
+    width: 80vw;
+    height: auto;
+  }
+  .texto {
+    width: 90vw;
+    text-align: center;
+  }
+  header {
+    flex-direction: column;
+    height: auto;
+  }
+  ul {
+    padding: 0;
+  }
+  li {
+    font-size: 1em;
+  }
+  button {
+    margin: auto;
+  }
+}
