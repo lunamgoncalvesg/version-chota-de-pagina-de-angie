@@ -13,8 +13,21 @@ let cart = document.querySelector('#cart');
 let home = document.querySelector('#home');
 let btns = document.querySelectorAll('#buy, #back');
 btns.forEach(btn => {
-    btn.addEventListener('click', e => {
+    btn.addEventListener('click', () => {
         cart.classList.toggle('active');
         home.classList.toggle('active');
     });
+});
+
+document.querySelector('form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    let cantidad = document.querySelector('input[type="number"]').value;
+    let total = cantidad * 15000;
+    let msg = document.querySelector('#msg');
+    if (!msg) {
+        msg = document.createElement('div');
+        msg.id = "mensaje-pedido";
+        cart.appendChild(msg);
+    }
+    msg.innerHTML = `<h2>Su pedido llega en 3 días hábiles.<br>Total: $${total}</h2>`;
 });

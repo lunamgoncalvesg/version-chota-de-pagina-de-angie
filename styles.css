@@ -3,27 +3,49 @@ html, body {
   padding: 0;
   height: 100%;
   width: 100%;
-  font-family: sans-serif;
-  background: #d9d1c1;
+  font-family: math;
+  background: url('https://cdnb.artstation.com/p/assets/images/images/073/402/099/large/marcos-lopez-garcia-close-up-orange-1.jpg?1709578626');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.container{
+  height: 80%;
+  width: 90%;
+  border-radius: 1em;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  padding: 2em;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
-  height: 15vh;
-  background: #9e6d60;
+  height: 10vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 2vw;
+  gap: 10em; /*corregir, jc:sb no anda*/
 }
 
 nav a {
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
   cursor: pointer;
+  border-radius: 2em;
+  padding: 0.7em;
 }
 
 nav a.active {
-  font-weight: bold;
+  background: #f0cf9e;
+}
+
+nav a:hover{
+  background: #f0cf9e;
+  transition: 1s;
 }
 
 li {
@@ -37,14 +59,17 @@ ul {
 }
 
 i {
-  color: #c9b681;
+  color: #ffffff;
+}
+
+header h2{
+  font-weight: 1000px;
 }
 
 main > div {
   display: none;
   height: 80vh;
   margin: 2.5vh 1.5vw;
-  background: #ad9585;
   border-radius: 2em;
   justify-content: space-around;
   align-items: center;
@@ -56,13 +81,19 @@ main > div.active {
 }
 
 main img {
-  width: 30vw;
+  width: 30%;
   height: auto;
   border-radius: 1em;
+  animation: bounce 5s ease infinite;
+}
+
+@keyframes bounce {
+    50% { transform:translateY(0%); }
+    50% { transform:translateY(-5%); }
 }
 
 .text {
-  width: 25vw;
+  width: 40%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -72,21 +103,92 @@ main img {
 
 button {
   width: 30%;
-  background: #9c724f;
+  background: #ffffff;
   border-radius: 2em;
   height: 7%;
-  border: #9c724f;
+  border: #ffffff;
 }
 
 button:hover {
-  background: #7e593b;
+  background: #f3af7e;
   cursor: pointer;
-  transition: 1s ease-in-out;
+  transition: 0.7s ease-in-out;
 }
 
-#cart.active{
-  display: flex;
+#cart {
+  display: none;
+  height: 80vh;
+  margin: 2.5vh 1.5vw;
+  border-radius: 2em;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+  gap: 2em;
+  padding: 2em;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+#cart.active {
+  display: flex;
+}
+
+#cart h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+#cart h2 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: #f0cf9e;
+}
+
+#cart form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+#cart input[type="text"],
+#cart input[type="number"] {
+  flex: 1 1 45%;
+  padding: 0.8em;
+  border-radius: 1em;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+}
+
+#cart input[type="submit"] {
+  flex: 1 1 100%;
+  padding: 1em;
+  border-radius: 2em;
+  border: none;
+  background: #ffffff;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#cart input[type="submit"]:hover {
+  background: #f3af7e;
+}
+
+#back {
+  margin-top: 1em;
+  width: 40%;
+}
+
+#msg {
+  margin-top: 1em;
+  font-size: 1.2em;
+  color: #f0cf9e;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -117,5 +219,24 @@ button:hover {
   }
   button {
     margin: auto;
+  }
+  #cart {
+    height: auto;
+    margin: 3vh 2vw;
+  }
+
+  #cart form {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  #cart input[type="text"],
+  #cart input[type="number"] {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  #back {
+    width: 80%;
   }
 }
