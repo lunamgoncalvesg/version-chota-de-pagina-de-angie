@@ -1,1 +1,1 @@
-se rompio la pagina no se como, estaba hermosa y ya no, y estoy llorando porque no encuentro la version que andaba.
+encontre una version vieja que excepto por el carrito y lo responsive, anda
