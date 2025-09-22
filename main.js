@@ -1,33 +1,63 @@
-document.querySelectorAll('nav ul li a')
-    .forEach(link => link.addEventListener('click', () => change(link.dataset.id, link)))
+let links = document.querySelectorAll('nav ul li a');
+let panels = document.querySelectorAll('main > .panel');
+let current = 0;
 
-function change(id, link) {
-    let panels = document.querySelectorAll('main > div')
-    panels.forEach(p => p.classList.remove('active'))
-    document.getElementById(id).classList.add('active')
-    document.querySelectorAll('nav ul li a').forEach(a => a.classList.remove('active'))
-    link.classList.add('active')
+function change(id, link = null) {
+    panels.forEach(p => p.classList.remove('active'));
+    links.forEach(a => a.classList.remove('active'));
+    cart.classList.remove('active');
+    panels[id].classList.add('active');
+    if (link) {
+        link.classList.add('active');
+        current = id;
+    } else {
+        links[id].classList.add('active');
+    }
 }
+
+links.forEach((link, index) =>
+    link.addEventListener('click', () => change(index, link))
+);
+
+setInterval(() => {
+    if(cart.classList.contains('active')) return;
+    current = (current + 1) % panels.length;
+    change(current);
+}, 5000);
 
 let cart = document.querySelector('#cart');
 let home = document.querySelector('#home');
 let btns = document.querySelectorAll('#buy, #back');
+let form = document.querySelector('form');
+let msg = document.querySelector('#msg');
+
 btns.forEach(btn => {
     btn.addEventListener('click', () => {
         cart.classList.toggle('active');
         home.classList.toggle('active');
+        form.style.display = cart.classList.contains('active') ? 'block' : 'none';
+        if (!cart.classList.contains('active')) msg.innerHTML = '';
     });
 });
 
-document.querySelector('form').addEventListener('submit', (e) => {
+let h3 = document.querySelector('#total');
+let units = 1;
+let input = document.querySelector('input[type="number"]');
+
+function updateTotal() {
+    let total = units * 15000;
+    h3.textContent = `$${total}`;
+}
+
+input.addEventListener('change', e => {
+    units = e.target.value;
+    updateTotal();
+});
+
+updateTotal();
+
+form.addEventListener('submit', e => {
     e.preventDefault();
-    let cantidad = document.querySelector('input[type="number"]').value;
-    let total = cantidad * 15000;
-    let msg = document.querySelector('#msg');
-    if (!msg) {
-        msg = document.createElement('div');
-        msg.id = "mensaje-pedido";
-        cart.appendChild(msg);
-    }
-    msg.innerHTML = `<h2>Su pedido llega en 3 días hábiles.<br>Total: $${total}</h2>`;
+    form.style.display = 'none';
+    msg.innerHTML = '<h1>Su pedido llega en 3 días hábiles.</h1>';
 });

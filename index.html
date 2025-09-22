@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,7 @@
 <body>
   <div class="container">
     <header>
-      <h2><i class="fa-solid fa-lightbulb"></i> Soluciones Sustentables</h2>
+      <h2><i class="fa-solid fa-lightbulb"></i> Soluciones Sustentables S.R.L</h2>
       <nav>
         <ul>
           <li><a data-id="home" class="active">Inicio</a></li>
@@ -22,50 +22,78 @@
       </nav>
     </header>
     <main>
-      <div class="active" id="home">
+      <div class="active panel" id="home">
         <div class="text">
           <h1>Datos del producto</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis illo distinctio numquam nulla voluptatum blanditiis assumenda necessitatibus? Officia velit maxime explicabo incidunt modi illo necessitatibus, totam tempore harum consectetur! Distinctio repudiandae praesentium labore iure deserunt sequi error nihil saepe, quia aspernatur expedita officiis aliquid.</p>
+          <p>
+            Ecoluz es nuestra lámpara ecológica. Es recargable mediante luz solar y cable USB,
+            portátil, ideal para uso doméstico o exterior. Está fabricada a partir de materiales
+            reciclados apuntando hacia un futuro más limpio.
+          </p>
           <button id="buy">Comprar</button>
         </div>
         <img src="https://png.pngtree.com/png-vector/20240528/ourmid/pngtree-crisp-lighting-the-beauty-of-incandescent-bulb-png-image_12541792.png" alt="foto">
       </div>
       <div id="cart">
-        <h1>Llena los datos para comprar tu lampara ecologica</h1>
-        <h2>$15000</h2>
+        <h1>Llená los datos para comprar tu lámpara ecológica</h1>
         <form>
           <input type="text" placeholder="Nombre">
           <input type="text" placeholder="Apellido">
           <input type="text" placeholder="DNI">
           <input type="text" placeholder="Calle">
           <input type="text" placeholder="Altura">
-          <input type="text" placeholder="Codigo postal">
           <input type="number" value="1" min="1">
-          <input type="submit" value="Finalizar compra">
+          <div class="form-actions">
+            <input type="submit" value="Finalizar compra">
+            <h3 id="total">$0</h3>
+            <button id="back">Volver</button>
+          </div>
         </form>
-        <button id="back">Volver</button>
         <div id="msg"></div>
       </div>
-      <div id="path">
+      <div class="panel" id="path">
         <div class="text">
-          <h1>Acerca de nosotros</h1>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum nulla saepe labore qui modi ratione fuga ducimus odit doloribus. Accusamus, possimus? Quasi itaque eveniet qui, vel facilis dicta tempora sed id ipsum, natus libero. Dignissimos, id nihil cupiditate repudiandae tempore commodi mollitia adipisci velit enim dolorem nesciunt unde error laudantium illo, reprehenderit ut odit quas expedita optio fugiat aperiam nemo.</p>
+          <h1>Origen de la idea</h1>
+          <p>
+            A nosotros nos interesa el medio ambiente, es por eso que diseñamos este foco accesible,
+            duradero, práctico e innovador para dejar nuestra huella en el futuro. La idea surge a partir
+            de pensar en que se quema un foco y automáticamente lo desechamos, junto con las facturas
+            de luz, y la contaminación, planteamos esta solución.
+          </p>
         </div>
         <img src="https://static.vecteezy.com/system/resources/previews/051/767/307/non_2x/3d-light-bulb-icon-a-bright-idea-for-your-projects-free-png.png" alt="foto">
       </div>
-      <div id="features">
+      <div class="panel" id="features">
         <div class="text">
-          <h1>Objetivo de nuestra lámpara</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste reiciendis, quasi nam repudiandae doloremque at voluptate nulla laborum beatae tempore asperiores nemo, exercitationem ipsam fugiat perferendis explicabo pariatur sunt odit sint optio nihil numquam. Aspernatur alias saepe eos ad dolor. Sequi, aspernatur. Vel accusamus quis mollitia suscipit atque est hic rerum, non nemo nam dignissimos beatae consectetur ratione voluptates eos!</p>
+          <h1>Características</h1>
+          <p>
+            No solo que nuestra lámpara tiene un diseño a partir de materiales reciclados, sino que el foco
+            tiene una forma que la hace ideal para cualquier tipo de iluminación, ya sea exterior o interior.
+            La luz es configurable dependiendo del ambiente y la hora, programable, con un aviso intermitente
+            un rato antes de quedarse sin batería. Carga rápidamente con luz del sol o por cable y no tiene
+            vida útil limitada.
+          </p>
         </div>
         <img src="https://www.gelighting.com/sites/default/files/styles/x_small_hq/public/image/2023-05/Dynamic%20Effects%20Products%20Smart%20Bulb.png?itok=zK9XACcq" alt="foto">
       </div>
-      <div id="about">
+      <div class="panel" id="about">
         <div class="text">
-          <h1>Equipo y patrocinadores</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore facilis, expedita officiis tempora numquam iure ullam tenetur, delectus cumque omnis iste recusandae non ut laborum explicabo, qui nam itaque doloremque reiciendis! Aperiam et, debitis est voluptatem, officia eius enim minus iure soluta, consequuntur laudantium earum praesentium suscipit veniam vel quaerat nesciunt architecto. Delectus reiciendis amet tenetur consectetur laudantium ut repellat?</p>
+          <div class="pure">
+            <h1>Equipo y patrocinadores</h1>
+            <p>
+              Nuestro equipo está formado por Iannopollo Angeline y Seiberth Valentín como encargados de todas
+              las tareas administrativas. Nuestro apoyo cuenta con grandes marcas como
+              <em>Fundación Energía Verde</em>, <em>Programa Jóvenes Emprendedores</em>,
+              <em>Proveeduría Recuplast</em> y <em>SolarTech</em>, lo cual nos vuelve de gran confianza.
+            </p>
+          </div>
+          <div class="references">
+            <a href="https://github.com/Valentin-Seiberth"><i class="fa-brands fa-github"></i></a>
+            Ciudad Autónoma de Buenos Aires, 2025
+            <a href="https://github.com/AngieIannopollo007"><i class="fa-brands fa-github"></i></a>
+          </div>
         </div>
-        <img src="fotito.jpg" alt="foto">
+        <img src="fotito.png" alt="foto">
       </div>
     </main>
   </div>
