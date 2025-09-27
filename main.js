@@ -30,23 +30,25 @@ let home = document.querySelector('#home');
 let btns = document.querySelectorAll('#buy, #back');
 let form = document.querySelector('form');
 let msg = document.querySelector('#msg');
+let h1 = document.querySelector('#cart h1');
 
 btns.forEach(btn => {
     btn.addEventListener('click', () => {
         cart.classList.toggle('active');
         home.classList.toggle('active');
-        form.style.display = cart.classList.contains('active') ? 'block' : 'none';
+        form.style.display = cart.classList.contains('active') ? 'grid' : 'none';
         if (!cart.classList.contains('active')) msg.innerHTML = '';
+        else h1.style.display = 'block';
     });
 });
 
-let h3 = document.querySelector('#total');
+let totalInput = document.querySelector('#total');
 let units = 1;
 let input = document.querySelector('input[type="number"]');
 
 function updateTotal() {
     let total = units * 15000;
-    h3.textContent = `$${total}`;
+    totalInput.value = `$${total}`;
 }
 
 input.addEventListener('change', e => {
@@ -60,4 +62,9 @@ form.addEventListener('submit', e => {
     e.preventDefault();
     form.style.display = 'none';
     msg.innerHTML = '<h1>Su pedido llega en 3 días hábiles.</h1>';
+    let h1 = document.querySelector('#cart h1');
+    h1.style.display = 'none';
+    let backBtn = document.querySelector("#back");
+    backBtn.style.justifySelf = 'center';
+    form.reset();
 });

@@ -4,13 +4,17 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: math;
-  background: url('https://cdnb.artstation.com/p/assets/images/images/073/402/099/large/marcos-lopez-garcia-close-up-orange-1.jpg?1709578626');
+  background: url('noRes.jpg');
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   overflow: hidden;
+}
+
+i{
+  color: white;
 }
 
 .container {
@@ -29,7 +33,7 @@ header {
   height: 10vh;
   display: flex;
   align-items: center;
-  gap: 10em; /* corregir, jc:sb no anda */
+  gap: 10em; /*jc:sb no anda, por eso el gap*/
 }
 
 nav a {
@@ -105,7 +109,11 @@ button, input[type="submit"], #back {
   border: #ffffff;
 }
 
-button:hover, input[type="submit"]:hover, #back:hover {
+#back {
+  margin-top: 3em;
+}
+
+button:hover, #cart input[type="submit"]:hover, #back:hover {
   background: #eb7b2c;
   cursor: pointer;
   transition: 0.3s ease-in-out;
@@ -116,89 +124,116 @@ button:hover, input[type="submit"]:hover, #back:hover {
   border-radius: 1em;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   padding: 2em;
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   text-align: center;
-  width: 100%;
+  margin-top: 1em;
 }
 
 #cart.active {
-  display: flex;
+  display: grid;
 }
 
 #cart form {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5em;
-  width: 100%;
-  max-width: 800px;
+  gap: 1em;
   justify-items: center;
-  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-#cart h1 {
-  grid-column: span 3;
-  text-align: center;
-  margin-bottom: 1em;
+#cart input[type="submit"] {
+  width: 100%;
+}
+
+#cart input {
+  background: rgba(255, 255, 255, 0.7);
 }
 
 #cart input,
-#cart h3,
 #cart input[type="submit"] {
-  width: 100%;
-  padding: 0.8em;
+  padding: 0.9em 1.5em;
   border-radius: 2em;
-  background: rgba(255, 255, 255, 0.7);
   border: none;
   text-align: center;
   font-size: 1em;
-}
-
-#cart h3 {
-  background: rgba(255, 255, 255, 0.7);
-  color: #333;
-}
-
-#cart input[type="submit"] {
-  cursor: pointer;
-  background: #ffffff;
-  transition: 0.3s;
-}
-
-#cart input[type="submit"]:hover {
-  background: #eb7b2c;
-  color: white;
-}
-
-#back {
-  margin-top: 2em;
-  padding: 0.9em 2em;
-  border-radius: 2em;
-  border: none;
-  background: #ffffff;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-#back:hover {
-  background: #eb7b2c;
-  color: white;
-}
-
-input {
-  background: rgba(255, 255, 255, 0.7);
-  border: none;
-  border-radius: 2em;
-  padding: 0.7em;
-  width: 100%;
+  color: rgb(47, 47, 47);
 }
 
 ::placeholder {
-  color: black;
+  color: rgb(47, 47, 47);
 }
 
-@media (max-width: 768px) {
-  /*agregar*/
+@media (max-width: 720px) {
+  html, body {
+    overflow: auto;
+    background: url('res.jpg');
+  }
+  header {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .container{
+    width: 75vw;
+  }
+  h2{
+    font-size: 1.3em;
+  }
+  .panel h1{
+    font-size: 1.2em;
+  }
+  .panel p {
+    font-size: 0.9em;
+  }
+  .panel {
+    margin-top: -7em;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  img {
+    margin-top: -12em;
+    padding: 0;
+    width: 50%;
+  }
+  .text {
+    width: 90%;
+    text-align: center;
+  }
+  nav ul {
+    font-size: 0.6em;
+    text-align: center;
+    padding: 0;
+  }
+  a {
+    text-align: center;
+    flex-wrap: nowrap;
+    display: flex;
+  }
+  .references {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  #cart.active {
+    width: 60vw;
+    display: grid;
+    margin-top: 5em;
+  }
+  #cart h1 {
+    font-size: 1.2em;
+  }
+  #cart form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.1em;
+  }
+  #back {
+    margin-top: 1.5em;
+  }
+  #cart input[type="submit"] {
+    width: 92%;
+  }
+  #cart input, #cart input[type="submit"] {
+    padding: 0.2em;
+  }
 }

@@ -31,22 +31,20 @@
         <img src="https://png.pngtree.com/png-vector/20240528/ourmid/pngtree-crisp-lighting-the-beauty-of-incandescent-bulb-png-image_12541792.png" alt="foto">
       </div>
       <div id="cart">
+        <h1>Llená los datos para comprar tu lámpara ecológica</h1>
         <form>
-          <h1>Llená los datos para comprar tu lámpara ecológica</h1>
           <input type="text" placeholder="Nombre">
           <input type="text" placeholder="Apellido">
           <input type="text" placeholder="DNI">
           <input type="text" placeholder="Calle">
           <input type="text" placeholder="Altura">
           <input type="text" placeholder="Código postal">
-          <div class="quantity">
-            <input type="number" value="1" min="1">
-            <h3 id="total"></h3>
-            <input type="submit" value="Finalizar compra">
-          </div>
+          <input type="number" value="1" min="1">
+          <input readOnly="true" value="$15000" id="total">
+          <input type="submit" value="Finalizar compra">
         </form>
-        <div id="msg"></div>
         <button id="back">Volver</button>
+        <div id="msg"></div>
       </div>
       <div class="panel" id="path">
         <div class="text">
