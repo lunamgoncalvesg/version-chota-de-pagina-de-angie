@@ -200,15 +200,10 @@ button:hover, #cart input[type="submit"]:hover, #back:hover {
     width: 90%;
     text-align: center;
   }
-  nav ul {
+  nav {
     font-size: 0.6em;
-    text-align: center;
-    padding: 0;
-  }
-  a {
-    text-align: center;
-    flex-wrap: nowrap;
-    display: flex;
+    position: absolute;
+    margin-top: 20%;
   }
   .references {
     display: flex;
