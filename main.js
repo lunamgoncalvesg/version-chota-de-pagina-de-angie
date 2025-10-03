@@ -19,12 +19,6 @@ links.forEach((link, index) =>
     link.addEventListener('click', () => change(index, link))
 );
 
-setInterval(() => {
-    if(cart.classList.contains('active')) return;
-    current = (current + 1) % panels.length;
-    change(current);
-}, 5000);
-
 let cart = document.querySelector('#cart');
 let home = document.querySelector('#home');
 let btns = document.querySelectorAll('#buy, #back');
