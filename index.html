@@ -3,34 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página de Angie y Seiberth</title>
+  <title>Página de Luna y Vicky</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/178/178591.png">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/628/628283.png">
 </head>
 <body>
   <div class="container">
     <header>
-      <h2><i class="fa-solid fa-lightbulb"></i> Soluciones Sustentables S.R.L</h2>
+      <h2><i class="fa-solid fa-seedling"></i> Floricienta Solutions</h2>
       <nav>
         <ul>
           <li><a data-id="home" class="active">Inicio</a></li>
           <li><a data-id="path">Nuestra historia</a></li>
+          <li><a data-id="features">Objetivos</a></li>
+          <li><a data-id="app">Aplicacion</a></li>
           <li><a data-id="about">Equipo</a></li>
         </ul>
       </nav>
+      <button id="menu"><i class="fa-solid fa-bars"></i></button>
     </header>
     <main>
       <div class="active panel" id="home">
-        <div class="text">
-          <h1>Datos del producto</h1>
-          <p><strong>Ecoluz</strong> es una lámpara ecológica y portátil, fabricada con materiales reciclados. Funciona con energía solar o cable USB, se recarga rápido y ofrece iluminación regulable para interiores y exteriores. Es programable, avisa antes de quedarse sin batería y cuenta con una larga vida útil sin necesidad de reemplazos.</p>
-          <button id="buy">Comprar</button>
+        <div class="row">
+          <button onclick="handleLeft()">&lt</button>
+          <div class="text">
+            <h1>Datos del producto</h1>
+            <p>Macetita es nuestra nueva invencion, una maceta ecologica perfecta para los distraidos 
+              y para plantas de cuidado especial.
+            </p>
+            <button id="buy">Comprar</button>
+          </div>
+          <button onclick="handleRight()">&gt</button>
         </div>
-        <img src="https://png.pngtree.com/png-vector/20240528/ourmid/pngtree-crisp-lighting-the-beauty-of-incandescent-bulb-png-image_12541792.png" alt="foto">
+        <img src="https://png.pngtree.com/png-vector/20231130/ourmid/pngtree-a-beauty-plant-in-white-pot-on-background-png-image_10785997.png" alt="foto">
       </div>
       <div id="cart">
-        <h1>Llená los datos para comprar tu lámpara ecológica</h1>
+        <h1>Llená los datos para comprar tu maceta</h1>
         <form>
           <input type="text" placeholder="Nombre">
           <input type="text" placeholder="Apellido">
@@ -46,23 +55,76 @@
         <div id="msg"></div>
       </div>
       <div class="panel" id="path">
-        <div class="text">
-          <h1>Origen de la idea</h1>
-          <p>A nosotros nos interesa el medio ambiente, es por eso que diseñamos este foco accesible, duradero, práctico e innovador para dejar nuestra huella en el futuro. La idea surge a partir de pensar en que se quema un foco y automáticamente lo desechamos, junto con las facturas de luz, y la contaminación, planteamos esta solución.</p>
+        <div class="row">
+          <button onclick="handleLeft()">&lt</button>
+          <div class="text">
+            <h1>Origen de la idea</h1>
+            <p>A todos nos pasa de olvidarnos de regar una planta por dias, o de regarla tan seguido 
+              que se nos termina ahogando. Es por eso que diseniamos una maceta que te avise cuando 
+              debes de regarla a tu celular. Y que mejor para esta maceta sino hacerla de materiales 
+              reciclados para contribuir al medio ambiente.
+            </p>
+          </div>
+          <button onclick="handleRight()">&gt</button>
         </div>
-        <img src="https://static.vecteezy.com/system/resources/previews/051/767/307/non_2x/3d-light-bulb-icon-a-bright-idea-for-your-projects-free-png.png" alt="foto">
+        <img src="https://png.pngtree.com/png-vector/20240309/ourmid/pngtree-home-plant-in-pot-cutout-png-image_11899655.png" alt="foto">
+      </div>
+      <div class="panel" id="features">
+        <div class="row">
+        <button onclick="handleLeft()">&lt</button>
+          <div class="text">
+            <h1>Características</h1>
+            <p>Macetita tiene un sensor de humedad que se activa al estar casi completamnte seca, 
+              mandandote una notificcion a tu celular y dejandote un margen para llegar a regarla en condiciones.
+              Es super resistente a las caidas, o golpes ya que esta construida a partir de cubiertas vencidas 
+              de auytos.
+            </p>
+          </div>
+          <button onclick="handleRight()">&gt</button>
+        </div>
+        <img src="https://marketplace.canva.com/v0wKg/MAE8rKv0wKg/1/tl/canva-plant-transparant-MAE8rKv0wKg.png" alt="foto">
+      </div>
+      <div class="panel" id="app">
+        <div class="row">
+          <button onclick="handleLeft()">&lt</button>
+          <div class="text">
+            <h1>Macetita app</h1>
+            <p>Las notificaciones de regado llegan a tu celular a traves de nuestra app super intuitiva, 
+              liviana y facil de configurar.<br>
+              Hace click para descargarla ahora (compatible con todos los 
+              celulares).
+            </p>
+            <a href="app.txt" download="app.txt">
+              <button>Descargar</button>
+            </a>
+          </div>
+          <button onclick="handleRight()">&gt</button>
+        </div>
+        <img src="https://plantsaver.app/img/features-img-1.png" alt="foto">
       </div>
       <div class="panel" id="about">
-        <div class="text">
-          <div class="pure">
-            <h1>Equipo y patrocinadores</h1>
-            <p>Nuestro equipo está formado por Iannopollo Angeline y Seiberth Valentín como encargados de todas las tareas administrativas. Nuestro apoyo cuenta con grandes marcas como <em>Fundación Energía Verde</em>, <em>Programa Jóvenes Emprendedores</em>, <em>Proveeduría Recuplast</em> y <em>SolarTech</em>, lo cual nos vuelve de gran confianza.</p>
+        <div class="row">
+          <button onclick="handleLeft()">&lt</button>
+          <div class="text">
+            <div class="pure">
+              <h1>Equipo y patrocinadores</h1>
+              <p>Nuestro equipo está formado por los gerentes 
+                Mirka Bellowsky, Copulus Le'Strange 
+                y los encargados Domínguez Victoria, Goncalves Luna, Nébula Domínguez y Goky Domínguez.
+                Contamos con el apoyo de 
+                <a href="https://www.colombraro.com.ar/">Colombraro</a>, 
+                <a href="https://www.wayra.com/">Wayra</a>, 
+                <a href="https://www.bosch.com.ar/">Bosch</a> 
+                y gomerías locales, lo que nos vuelve de gran confianza.
+              </p>
+            </div>
+            <div class="references">
+                <a href="https://github.com/lunamgoncalvesg"><i class="fa-brands fa-github"></i></a>
+                Ciudad Autónoma de Buenos Aires, 2025
+                <a href="https://github.com/dominguezvictoria"><i class="fa-brands fa-github"></i></a>
+            </div>
           </div>
-          <div class="references">
-              <a href="https://github.com/Valentin-Seiberth"><i class="fa-brands fa-github"></i></a>
-              Ciudad Autónoma de Buenos Aires, 2025
-              <a href="https://github.com/AngieIannopollo007"><i class="fa-brands fa-github"></i></a>
-          </div>
+          <button onclick="handleRight()">&gt</button>
         </div>
         <img src="fotito.png" alt="foto">
       </div>
